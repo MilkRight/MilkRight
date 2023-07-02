@@ -47,7 +47,7 @@ local IsHardcoreMode = (game.PlaceId == 10321372166 and true) or false
 local Premium = (LRM_IsUserPremium and true) or (not LPH_OBFUSCATED and true) or false
 local DiscordID = (not LPH_OBFUSCATED and "Flury") or (LRM_LinkedDiscordID and LRM_LinkedDiscordID)  or "Someone"
 local RemotesLoaded = false
-local ScriptVersion = 2.4
+local ScriptVersion = 420.69
 
 --// PSX Remotes
 local Remotes = {
