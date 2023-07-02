@@ -28,14 +28,14 @@ local PathfindingService = game:GetService("PathfindingService")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
 local Player = Players.LocalPlayer
 
-if not isfolder("MilkUp") then
-    makefolder("MilkUp")
+if not isfolder("MilkRight") then
+    makefolder("MilkRight")
 end
-if not isfolder("MilkUp/PetSimulatorX") then
-    makefolder("MilkUp/PetSimulatorX")
+if not isfolder("MilkRight/PetSimulatorX") then
+    makefolder("MilkRight/PetSimulatorX")
 end
-if not isfile("MilkUp/PetSimulatorX/GlobalSettings.json") then
-    writefile("MilkUp/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = false, ["SeparateConfig"] = false}))
+if not isfile("MilkRight/PetSimulatorX/GlobalSettings.json") then
+    writefile("MilkRight/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = false, ["SeparateConfig"] = false}))
 end
 
 local Library = require(ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library"))
@@ -416,15 +416,15 @@ getgenv().Config = {
     }
 }
 
-local IsLoadConfig = (HttpService:JSONDecode(readfile("MilkUp/PetSimulatorX/GlobalSettings.json"))["LoadConfig"] == true and true) or false
-local IsSeparateConfig = (HttpService:JSONDecode(readfile("MilkUp/PetSimulatorX/GlobalSettings.json"))["SeparateConfig"] == true and true) or false
-if not isfile("MilkUp/PetSimulatorX/DefaultConfig.json") then
-    writefile("MilkUp/PetSimulatorX/DefaultConfig.json", HttpService:JSONEncode(Config))
+local IsLoadConfig = (HttpService:JSONDecode(readfile("MilkRight/PetSimulatorX/GlobalSettings.json"))["LoadConfig"] == true and true) or false
+local IsSeparateConfig = (HttpService:JSONDecode(readfile("MilkRight/PetSimulatorX/GlobalSettings.json"))["SeparateConfig"] == true and true) or false
+if not isfile("MilkRight/PetSimulatorX/DefaultConfig.json") then
+    writefile("MilkRight/PetSimulatorX/DefaultConfig.json", HttpService:JSONEncode(Config))
 end
-if IsSeparateConfig and not isfile("MilkUp/PetSimulatorX/"..Player.Name..".json") then
-    writefile("MilkUp/PetSimulatorX/"..Player.Name..".json", HttpService:JSONEncode(Config))
+if IsSeparateConfig and not isfile("MilkRight/PetSimulatorX/"..Player.Name..".json") then
+    writefile("MilkRight/PetSimulatorX/"..Player.Name..".json", HttpService:JSONEncode(Config))
 end
-local ConfigName = (IsSeparateConfig and "MilkUp/PetSimulatorX/"..Player.Name..".json") or "MilkUp/PetSimulatorX/DefaultConfig.json"
+local ConfigName = (IsSeparateConfig and "MilkRight/PetSimulatorX/"..Player.Name..".json") or "MilkRight/PetSimulatorX/DefaultConfig.json"
 
 --// Config
 local function DeleteConfig()
@@ -486,8 +486,8 @@ end
 
 local ConfigSuccess, ConfigError = pcall(function() LoadConfig() end)
 if not ConfigSuccess then
-    warn("(Error-MilkUp) "..ConfigError)
-    AdvancedSignal("Config Error! Please Make A Ticket At .gg/milkup", Color3.fromRGB(224, 67, 67))
+    warn("(Error-MilkRight) "..ConfigError)
+    AdvancedSignal("Config Error! Please Make A Ticket At .gg/MilkRight", Color3.fromRGB(224, 67, 67))
 end
 
 --// Tables
@@ -2617,7 +2617,7 @@ end
 --// UI Library
 local RayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/MilkRight/MilkRight/main/rayfield"))()
 
-local Window = RayField:CreateWindow({Name = "[🐄] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Want To Get Fucked!", ConfigurationSaving = {Enabled = true, FolderName = "MilkUp", FileName = SeparateConfigFileName}})
+local Window = RayField:CreateWindow({Name = "[🐄] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Want To Get Fucked!", ConfigurationSaving = {Enabled = true, FolderName = "MilkRight", FileName = SeparateConfigFileName}})
 
 local InformationTab = Window:CreateTab("Information (❗)")
 
@@ -4836,8 +4836,8 @@ ConfigTab:CreateToggle({
     CurrentValue = IsLoadConfig,
 	Callback = function(Value)
         IsLoadConfig = Value
-        writefile("MilkUp/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = IsLoadConfig, ["SeparateConfig"] = IsSeparateConfig}))
-        IsLoadConfig = HttpService:JSONDecode(readfile("MilkUp/PetSimulatorX/GlobalSettings.json"))["LoadConfig"]
+        writefile("MilkRight/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = IsLoadConfig, ["SeparateConfig"] = IsSeparateConfig}))
+        IsLoadConfig = HttpService:JSONDecode(readfile("MilkRight/PetSimulatorX/GlobalSettings.json"))["LoadConfig"]
     end
 })
 
@@ -4846,8 +4846,8 @@ ConfigTab:CreateToggle({
     CurrentValue = IsSeparateConfig,
 	Callback = function(Value)
         IsSeparateConfig = Value
-        writefile("MilkUp/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = IsLoadConfig, ["SeparateConfig"] = IsSeparateConfig}))
-        IsSeparateConfig = HttpService:JSONDecode(readfile("MilkUp/PetSimulatorX/GlobalSettings.json"))["SeparateConfig"]
+        writefile("MilkRight/PetSimulatorX/GlobalSettings.json", HttpService:JSONEncode({["LoadConfig"] = IsLoadConfig, ["SeparateConfig"] = IsSeparateConfig}))
+        IsSeparateConfig = HttpService:JSONDecode(readfile("MilkRight/PetSimulatorX/GlobalSettings.json"))["SeparateConfig"]
     end
 })
 
