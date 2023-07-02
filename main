@@ -2617,7 +2617,7 @@ end
 --// UI Library
 local RayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/MilkRight/MilkRight/main/rayfield"))()
 
-local Window = RayField:CreateWindow({Name = "[💖] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Need Help!", ConfigurationSaving = {Enabled = true, FolderName = "MilkUp", FileName = SeparateConfigFileName}})
+local Window = RayField:CreateWindow({Name = "[🐄] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Need Help!", ConfigurationSaving = {Enabled = true, FolderName = "MilkUp", FileName = SeparateConfigFileName}})
 
 local InformationTab = Window:CreateTab("Information (❗)")
 
@@ -2650,7 +2650,7 @@ InformationTab:CreateButton({
   	end
 })
 
-local ValentinesTab = Window:CreateTab("Valentines (💕)")
+local ValentinesTab = Window:CreateTab("Useless (💩)")
 
 local HeartsSection = ValentinesTab:CreateSection("Hearts Farm")
 
