@@ -2617,7 +2617,7 @@ end
 --// UI Library
 local RayField = loadstring(game:HttpGet("https://raw.githubusercontent.com/MilkRight/MilkRight/main/rayfield"))()
 
-local Window = RayField:CreateWindow({Name = "[🐄] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Need Help!", ConfigurationSaving = {Enabled = true, FolderName = "MilkUp", FileName = SeparateConfigFileName}})
+local Window = RayField:CreateWindow({Name = "[💖] Pet Simulator X | Milk Right Freemium"..((Premium and " Premium") or ""), LoadingTitle = "Loading"..((Premium and " Premium Version") or " Free Version"), LoadingSubtitle = "Please Join The Discord If You Need Help!", ConfigurationSaving = {Enabled = true, FolderName = "MilkUp", FileName = SeparateConfigFileName}})
 
 local InformationTab = Window:CreateTab("Information (❗)")
 
@@ -2630,7 +2630,7 @@ local OwnerLabel = InformationTab:CreateLabel("Script Devoloped By: Your Mother"
 
 local QuestionsSection = InformationTab:CreateSection("Questions")
 
-local QuestionsParagraph = InformationTab:CreateParagraph({Title = "Questions", Content = "[Q] It Says Theres Booth Sniping But I Cant Find The Tab?\n[A] You Can Scroll On The Tabs For More Tabs\n[Q] Farming Wont Work?\n[A] Have The Right Area Unlocked And Have Pets Equiped\n[Q] Why Do I Crash So Much\n[A] You Crash A Lot Cause Of Farming Speeds And Webhooks"})
+local QuestionsParagraph = InformationTab:CreateParagraph({Title = "Questions", Content = "[Q] Would you like to get fucked in your ass?\n[A] Yes ofc LOL!\n[Q] Farming Wont Work?\n[A] Have to fuck some goats!\n[Q] Why Do I Crash ?\n[A] YOOO MAMA!"})
 
 local DiscordSection = InformationTab:CreateSection("Discord")
 
@@ -2650,7 +2650,7 @@ InformationTab:CreateButton({
   	end
 })
 
-local ValentinesTab = Window:CreateTab("Ignore that (💩)")
+local ValentinesTab = Window:CreateTab("Valentines (💕)")
 
 local HeartsSection = ValentinesTab:CreateSection("Hearts Farm")
 
